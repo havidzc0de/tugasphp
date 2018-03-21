@@ -15,36 +15,18 @@ $bulan = ['January',
 
 ];
 
-// $bulan = ['01' => 'Januari',
-// '02'=>'Februari',
-// '03'=>'Maret',
-// '04'=>'April',
-// '05'=>'Mei',
-// '06'=>'Juni',
-// '07'=>'Juli',
-// '08'=>'Agustus',
-// '09'=>'September',
-// '10'=>'Oktober',
-// '11'=>'November',
-// '12'=>'Desember',
 
-// ];
-
-
-// echo "<pre>"; var_dump($bulan);
 
 $hari_ini = date('d');
 $bulan_ini = date('F');
 $tahun_ini = date('Y');
-// echo "$hari_ini $bulan_ini $tahun_ini";
-
 
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Tugas Array</title>
-	<link rel="stylesheet" type="text/css" href="../bootstrap/dist/css/bootstrap.min.css">
+
 	<style type="text/css">
 		*{
 			margin: 0 auto;
@@ -58,13 +40,19 @@ $tahun_ini = date('Y');
 		}
 		.container{
 			text-align: center;
-			width: 900px;
-			line-height: 500px;
+			width: 400px;
+			height: 400px;
 			background-color: salmon;
 		}
 		.container h1{
 			position: relative;
-			top: 130px;
+			top: 10px;
+			margin-bottom: 30px;
+			position: relative;
+			top: 100px;
+		}
+		.isi{
+			line-height: 300px;
 		}
 	</style>
 </head>
@@ -72,7 +60,8 @@ $tahun_ini = date('Y');
 
 	<div class="container">
 		<h1>{ Tugas Array PHP }</h1>
-		<select class="select form-control col-md-1">
+		<div class="isi">
+			<select>
 		<?php 
 		for ($i=1; $i < 31; $i++) { ?>
 		<?php 
@@ -87,7 +76,7 @@ $tahun_ini = date('Y');
 	</select>
 
 	
-	<select class="select form-control col-md-2">
+	<select>
 		<?php foreach ($bulan as $bln) { ?>
 			<?php 
 			if ($bulan_ini == $bln) { ?>
@@ -101,7 +90,7 @@ $tahun_ini = date('Y');
 
 
 
-	<select class="select form-control col-md-2">
+	<select>
 		<?php for ($i=2014; $i <= 2018 ; $i++) { ?>
 			<?php if ($tahun_ini == $i) { ?>
 				<option value="<?= $i; ?>" selected><?= $i; ?></option>
@@ -110,6 +99,7 @@ $tahun_ini = date('Y');
 			<?php } ?>
 		<?php } ?>
 	</select>
+		</div>
 
 	</div>
 
