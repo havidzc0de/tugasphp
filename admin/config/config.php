@@ -2,7 +2,7 @@
 
 $host = 'localhost';
 $user = 'root';
-$password = 'sav3gaza.';
+$password = '';
 $db = 'northwind';
 
 

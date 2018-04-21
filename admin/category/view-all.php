@@ -308,7 +308,7 @@ include "../config/config.php";
     <div class="row">
       <div class="col-md-12">
  
-
+        <div class="table-responsive">
          <table class="table">
           <thead class="thead-dark">
             <tr>
@@ -338,6 +338,7 @@ include "../config/config.php";
                     <?php } ?>
           </tbody>
         </table>
+      </div>
 
 
       </div>
