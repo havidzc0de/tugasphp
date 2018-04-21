@@ -1,24 +1,24 @@
 <?php 
 
-$bulan = ['January',
-'February',
-'March',
+$bulan = ['Januari',
+'Februari',
+'Maret',
 'April',
-'May',
-'June',
-'July',
-'August',
+'Mei',
+'Juni',
+'Juli',
+'Augustus',
 'September',
-'October',
+'Oktober',
 'November',
-'December',
+'Desember',
 
 ];
 
 
 
 $hari_ini = date('d');
-$bulan_ini = date('F');
+$bulan_ini = date('n');
 $tahun_ini = date('Y');
 
 ?>
@@ -67,8 +67,12 @@ $tahun_ini = date('Y');
 			</select>			
 			<select>
 
-				<?php foreach ($bulan as $bln) {
+				<!-- <?php foreach ($bulan as $bln) {
 					echo $bulan_ini == $bln ? "<option value='$bln' selected>$bln</option>" : "<option value='$bln'>$bln</option>";
+				} ?> -->
+
+				<?php foreach ($bulan as $key => $value) {
+					echo $bulan_ini == $key+1 ? "<option value='$value' selected>$value</option>" : "<option value='$value'>$value</option>";
 				} ?>
 
 			</select> 
