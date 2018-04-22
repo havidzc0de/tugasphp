@@ -51,7 +51,7 @@ include "config/config.php";
 
     <header class="main-header">
       <!-- Logo -->
-      <a href="index2.html" class="logo">
+      <a href="index.php" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
         <span class="logo-mini"><b>A</b>LT</span>
         <!-- logo for regular state and mobile devices -->
@@ -205,14 +205,18 @@ include "config/config.php";
           <span>Employes</span>
         </a>
       </li>
-
       <li class="treeview">
         <a href="#">
-          <i class="fa fa-laptop"></i>
+          <i class="fa fa-bookmark-o "></i>
           <span>Manage Categories</span>
+           <i class="fa fa-angle-left pull-right"></i>
         </a>
+        <ul class="treeview-menu">
+          <li><a href="category/view-all.php"><i class="fa fa-list "></i> List Category</a></li>
+          <li><a href="category/add.php"><i class="fa fa-plus-square"></i> Add Category</a></li>
+          <li><a href="category/edit.php"><i class="fa fa-edit"></i> Edit Category</a></li>
+        </ul>
       </li>
-
     </ul>
   </section>
   <!-- /.sidebar -->
