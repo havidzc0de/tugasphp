@@ -11,7 +11,7 @@ include "config/config.php";
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Admin | Dashboard</title>
+  <title><?= App_name; ?></title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -159,7 +159,7 @@ include "config/config.php";
           <li><a href="index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
         </ul> -->
       </li>
-      
+
       <li class="treeview">
         <a href="#">
           <i class="glyphicon glyphicon-th-list"></i>
@@ -169,9 +169,9 @@ include "config/config.php";
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="#"><i class="fa fa-list "></i> List Product</a></li>
-          <li><a href="#"><i class="fa fa-plus-square"></i> Add Product</a></li>
-          <li><a href="#"><i class="fa fa-edit"></i> Edit Product</a></li>
+          <li><a href="index.php?pages=list_product"><i class="fa fa-list "></i> List Product</a></li>
+          <li><a href="index.php?pages=add_product"><i class="fa fa-plus-square"></i> Add Product</a></li>
+
         </ul>
       </li>
       <li class="treeview">
@@ -185,26 +185,14 @@ include "config/config.php";
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="orders/view-all.php"><i class="fa fa-list-ul"></i>Semua</a></li>
-          <li><a href="#"><i class="fa fa-credit-card "></i>Belum Bayar</a></li>
-          <li><a href="#"><i class="fa fa-truck "></i>Perlu Dikirim</a></li>
-          <li><a href="#"><i class="fa fa-handshake-o "></i>Selesai</a></li>
+          <li><a href="index.php?pages=list_orders"><i class="fa fa-list-ul"></i>Semua</a></li>
+          <li><a href="index.php?pages=belum_bayar"><i class="fa fa-credit-card "></i>Belum Bayar</a></li>
+          <li><a href="index.php?pages=perlu_dikirim"><i class="fa fa-truck "></i>Perlu Dikirim</a></li>
+          <li><a href="index.php?pages=selesai"><i class="fa fa-handshake-o "></i>Selesai</a></li>
 
         </ul>
       </li>
-      <li class="treeview">
-        <a href="#">
-          <i class="fa fa-laptop"></i>
-          <span>Customers</span>
-        </a>
-      </li>
-      </li>
-      <li class="treeview">
-        <a href="#">
-          <i class="fa fa-laptop"></i>
-          <span>Employes</span>
-        </a>
-      </li>
+      
       <li class="treeview">
         <a href="#">
           <i class="fa fa-bookmark-o "></i>
@@ -212,9 +200,8 @@ include "config/config.php";
            <i class="fa fa-angle-left pull-right"></i>
         </a>
         <ul class="treeview-menu">
-          <li><a href="category/view-all.php"><i class="fa fa-list "></i> List Category</a></li>
-          <li><a href="category/add.php"><i class="fa fa-plus-square"></i> Add Category</a></li>
-          <li><a href="category/edit.php"><i class="fa fa-edit"></i> Edit Category</a></li>
+          <li><a href="index.php?pages=list_category"><i class="fa fa-list "></i> List Category</a></li>
+          <li><a href="index.php?pages=add_category"><i class="fa fa-plus-square"></i> Add Category</a></li>
         </ul>
       </li>
     </ul>
@@ -306,7 +293,9 @@ include "config/config.php";
     <!-- Main row -->
     <div class="row">
       
-
+      <?php 
+        main_menu();
+       ?>
       
       </section>
       <!-- /.content -->
